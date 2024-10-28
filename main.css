@@ -1,0 +1,360 @@
+/* 해더 부분 */
+*{ /* 전체에 이걸 주겠다*/
+    margin: 0;  /*모든 방향에 마진 그니까 공백을 0  */
+    padding: 0; /*얘도 같음*/
+    box-sizing: border-box;  /* box-sizing: border-box;에 border나 padding을 추가하면 해당 box의 크기는 그만큼 더 커지지 않고 사용자가 지정한 너비나 높이만큼 길이에 맞추게 된다. border값이나 padding 값는 지정한  width값이나 height값에 포함이 됨 */
+
+}
+
+
+
+
+html{ /*애는 HTML에만 주겟다 */
+    height: 100%; 
+}
+
+body{ /*애는 바디에만 주겟다 */
+    height: 100%;
+
+}
+
+
+
+.header_ver_2{  /*내려오는 부분에 주겟다*/
+    display: flex; /* 축의 기준을 바꿈*/
+    justify-content: space-around; /* 양옆 포함 객체마다 공백 생성*/
+
+}
+
+ul, li{ 
+    list-style-type: none;
+}
+
+.main_menu > li > a{ /*메인 안에있는  li중 그안에 있는a 한테 코드 적용해라*/
+    color: black;
+    font-size: 20px;
+    display: block;
+    text-decoration: none; /*a 태그 텍스트만 보이게 설정 */
+    padding: 10px 20px;
+}
+
+.sub_menu > li > a{
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: black;
+}
+
+.sub_menu{
+    position: absolute; 
+    opacity: 0;
+    visibility: hidden; 
+
+    transition: all 0.5s ease;
+}
+
+.main_menu > li {
+    width: 200px;
+    text-align: center;
+}
+
+.sub_menu > li{
+    width: 200px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+li:hover > .sub_menu{ /*호버가 마우스 포인트 가져다댓을떄*/
+    opacity: 1;
+    visibility: visible; /*안보이는게 보임*/
+
+    background-color: rgb(242, 242, 242);
+}
+
+/* .sub_menu > li > a:hover { 
+    background-color: darkgrey;
+} */
+
+input{
+    border: none;
+}
+
+/* search 부분 */
+
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
+
+.search_1{
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+    position: relative;
+    display: flex;
+
+    border: 2px black;
+
+}
+
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid black;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: black;
+}
+
+.href { 
+    width: 40px;
+    height: 36px;
+    border: 1px solid black;
+    background: black;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/*Resize the wrap to see the search bar change!*/
+/* .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/* search 부분 끝 */
+
+
+
+/* li{
+    margin-right: 39px;
+}
+
+ol ,li{
+    list-style: none;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_center{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_center_2{
+    margin-left: 150px;
+    margin-right: 150px;
+} */
+
+.fixed_letter{
+    position: fixed;
+    top: 200px;
+    left: 330px;
+    width: 200px;
+    height: 170px;
+}
+
+.main_1{
+    width: 300px;
+    height: 50vh;
+    border-radius: 10%;
+    /* position: absolute;
+    top: 80px;
+    left: 700px; */
+}
+
+/* .main_1:hover{
+    transform: scale(1.1);
+} */
+
+/* .main_1_img{
+    width: 280px;
+    height: 40vh;
+    background: url(html.png) no-repeat center;
+    background-size: cover;
+
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+
+.main_1_img:hover{
+    background-image: none;
+    background: url(https://repository-images.githubusercontent.com/657248114/d3c7b91a-b285-4d1e-8429-5de1acc5f61e) no-repeat center;
+    background-size: cover;
+} */
+
+.main_2{
+    width: 300px;
+    height: 330px;
+    border-radius: 10%;
+    /* position: absolute;
+    top: 400px;
+    left: 1050px; */
+}
+
+/* .main_2:hover{
+    transform: scale(1.1);
+}
+
+.main_2_img{
+    width: 280px;
+    height: 30vh;
+    border-radius: 10%;
+    position: absolute;
+    top: 20px;
+    left: 10px; 
+
+    background: url(https://blog.kakaocdn.net/dn/cXK3Hu/btqCQoKyfuZ/S1XHRYJ6kB53EZEAMSMCQK/img.png ) no-repeat center;
+    background-size: cover;
+}
+
+.main_2_img:hover{
+    background-image: none;
+    background: url(https://repository-images.githubusercontent.com/657248114/d3c7b91a-b285-4d1e-8429-5de1acc5f61e) no-repeat center;
+    background-size: cover;
+
+
+    margin: auto;
+
+    
+} */
+
+.main_3{
+    width: 300px;
+    height: 500px;
+    /* border-radius: 10%;
+    position: absolute;
+    top: 800px;
+    left: 700px;*/
+} 
+
+.main_4{
+    width: 200px;
+    height: 200px;
+    /* border-radius: 100%; */
+    /* position: absolute;
+    top: 1000px;
+    left: 1100px; */
+}
+
+.main_5{
+    width: 320px;
+    height: 300px;
+    /* border-radius: 10%; */
+    /* position: absolute;
+    top: 1400px;
+    left: 1000px; */
+}
+
+.main_6{
+    width: 200px;
+    height: 200px;
+    /* border-radius: 50%; */
+    /* position: absolute;
+    top: 1550px;
+    left: 750px; */
+}
+
+.main_7{
+    width: 220px;
+    height: 220px;
+    /* border-radius: 10%; */
+    /* position: absolute;
+    top: 1900px;
+    left: 750px; */
+}
+
+.header_center_sub{
+    visibility: hidden;
+    transition: all ease;
+}
+
+li:hover > div > .header_center_sub{
+    opacity: 1;
+    visibility: visible;
+}
+
+.a{
+    display: flex;
+}
+
+.header_center_middle{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.main_section > div{
+    opacity: 1;
+}
+
+.main_first, .main_second, .main_third{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* button{
+    color: red;
+}
+ */
+
+.top_imae{
+    font-size: 200%;
+}
+
+/* .ekscp{
+    margin-top: 50%;
+    margin-left: 50%;
+} */
+
+.a{
+    display: flex;
+    /* justify-content: space-around; */
+    margin-top: 5%;
+
+
+    font-size: 130%;
+
+}
+tr, td{
+    margin: 8%;
+}
+
+a{
+    text-decoration-line: none;
+    color: black;
+}
+.w{
+    position: fixed;
+    top: 30%;
+    left: 65%;
+
+    /* margin-right: 50%; */
+}
+.slideshow-container{
+    margin-left: 5%;
+}
